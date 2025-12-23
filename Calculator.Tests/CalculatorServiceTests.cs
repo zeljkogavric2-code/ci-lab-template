@@ -23,9 +23,8 @@ public class CalculatorServiceTests
     [Fact]
     public void Divide_ByZero_ThrowsException()
     {
-        /*Assert.Throws<DivideByZeroException>(() =>
-            _calculator.Divide(10, 0));*/
-        var result = _calculator.Divide(5, 0);
-        Assert.Equal(2, result);
+        Assert.Throws<DivideByZeroException>(() =>
+            _calculator.Divide(10, 0));
+       
     }
 }
