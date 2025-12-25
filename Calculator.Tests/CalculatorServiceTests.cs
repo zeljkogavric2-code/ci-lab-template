@@ -21,6 +21,13 @@ public class CalculatorServiceTests
     }
 
     [Fact]
+    public void Subtract_ReturnsCorrect()
+    {
+        var result = _calculator.Subtract(5, 3);
+        Assert.Equal(2, result);
+    }
+
+    [Fact]
     public void Divide_ByZero_ThrowsException()
     {
         Assert.Throws<DivideByZeroException>(() =>
